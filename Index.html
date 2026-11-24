@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กำลังพากท่านไปยังแดชบอร์ดนิติบุคคล...</title>
+    
+    <script>
+        // ==========================================
+        // 📌 ตั้งค่าลิงก์ Google Apps Script ตรงนี้จุดเดียว
+        // ==========================================
+        const TARGET_URL = "https://script.google.com/macros/s/AKfycbzs6vUQM31rz0ukABWvylbL72mpx711Gor11duj8WElIgZB9KcjcxlGpXtmg66FWlFdjg/exec";
+        
+        // สั่ง Redirect ทันทีด้วย JavaScript
+        window.location.replace(TARGET_URL);
+    </script>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            padding-top: 50px;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        .loader {
+            margin: 20px auto;
+            border: 4px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+    <h2>กำลังเข้าสู่ระบบแดชบอร์ดนิติบุคคลหมู่บ้านศรีสุวรรณ...</h2>
+    <p>หากระบบไม่นำท่านไปอัตโนมัติ กรุณา <a id="fallback-link" href="#">คลิกที่นี่เพื่อเข้าสู่ระบบ</a></p>
+
+    <script>
+        // นำค่าจากตัวแปร TARGET_URL มาใส่ลิงก์สำรองให้อัตโนมัติ
+        document.getElementById('fallback-link').href = TARGET_URL;
+    </script>
+</body>
+</html>
